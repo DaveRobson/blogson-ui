@@ -9,7 +9,13 @@ export default Mirage.Factory.extend({
 
   title() { return 'test'; },
   author() { return 'David Robson'; },
-  content() { return 'Loads of awsome content'; }
+  content() { return 'Loads of awsome content'; },
+  name() {
+    return 'content-test';
+  },
+  template() {
+    return '<div>{{content-test content=model.content}}</div>';
+  }
 
 
   // name: 'Pete',                         // strings
