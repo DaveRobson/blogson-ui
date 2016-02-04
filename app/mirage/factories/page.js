@@ -14,7 +14,7 @@ export default Mirage.Factory.extend({
     return 'content-test';
   },
   template() {
-    return '<div>{{content-test content=model.content}}</div>';
+    return '<h1>{{model.title}}</h1><div>{{content-test content=model.content}}</div>';
   }
 
 

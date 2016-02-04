@@ -12,8 +12,8 @@ export default Ember.Route.extend({
   },
   renderTemplate: function() {
     this.render('dynamic', {
-      outlet: 'main',
-      view: 'page'
+      into: 'application',
+      outlet: 'main'
     });
   }
 });
