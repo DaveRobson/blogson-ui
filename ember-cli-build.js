@@ -5,10 +5,22 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    'ember-cli-summernote': {
+      "importBootstrapCSS": true,
+      "importBootstrapJS": true
+    }
   });
 
 
-  app.import('bower_components/ember/ember-template-compiler.js')
+  app.import('bower_components/ember/ember-template-compiler.js');
+  app.import('bower_components/font-awesome/css/font-awesome.min.css');
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2', {
+    destDir: 'fonts'
+  });
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

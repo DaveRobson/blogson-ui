@@ -9,24 +9,17 @@ export default Mirage.Factory.extend({
 
   title() { return 'test'; },
   author() { return 'David Robson'; },
-  content() { return 'Loads of awsome content'; },
-  name() {
-    return 'content-test';
+  payload() {
+    return {
+      'editor': {
+        'content': '<p>Loads of awesome content</p>',
+        'header': 'Awesome Example'
+      }
+    };
   },
   template() {
-    return '<h1>{{model.title}}</h1><div>{{content-test content=model.content}}</div>';
+    return "<h1>{{model.title}}</h1><div>{{wysiwyg-editor content=model.payload.editor.content header=model.payload.editor.header}}</div>";
   }
 
 
-  // name: 'Pete',                         // strings
-  // age: 20,                              // numbers
-  // tall: true,                           // booleans
-
-  // email: function(i) {                  // and functions
-  //   return 'person' + i + '@test.com';
-  // },
-
-  // firstName: faker.name.firstName,       // using faker
-  // lastName: faker.name.firstName,
-  // zipCode: faker.address.zipCode
 });
