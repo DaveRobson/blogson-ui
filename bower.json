@@ -12,7 +12,9 @@
     "lodash": "~3.7.0",
     "Faker": "~3.0.0",
     "summernote": "~0.7.0",
-    "firebase": "^2.1.0"
+    "firebase": "^2.1.0",
+    "codemirror": "5.11.0",
+    "ember-cli-codemirror-shim": "^0.0.1"
   },
   "resolutions": {
     "ember": "2.2.0"

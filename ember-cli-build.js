@@ -8,6 +8,11 @@ module.exports = function(defaults) {
     'ember-cli-summernote': {
       "importBootstrapCSS": true,
       "importBootstrapJS": true
+    },
+
+    codemirror: {
+      modes: ['handlebars', 'xml'],
+      themes: ['monokai']
     }
   });
 

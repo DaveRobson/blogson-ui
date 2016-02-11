@@ -6,7 +6,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('admin', function() {
+    this.route('page');
+  });
   this.route('page', { path: '/:page_id'} );
+
 });
 
 export default Router;
