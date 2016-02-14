@@ -1,3 +1,21 @@
 <h1>Create</h1>
 
-{{ivy-codemirror mode=model.mode theme=model.theme}}
+<div class="container">
+  <form {{action "create" this on="submit"}}>
+    <div class="row">
+      Page name: {{input value=model.page.name}}
+    </div>
+    <div class="row">
+      Title: {{input value=model.page.title}}
+    </div>
+    <div class="row">
+      Author: {{input value=model.page.author}}
+    </div>
+    <div class="row">
+      {{ivy-codemirror mode=model.mode theme=model.theme class="template" value=mode.page.template}}
+    </div>
+
+    <button type="submit" class="btn">Create</button>
+  </form>
+</div>
+
